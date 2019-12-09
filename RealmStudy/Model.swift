@@ -10,7 +10,9 @@ import RealmSwift
 import Instantiate
 import InstantiateStandard
 
-class Charactors: Object {
-    @objc dynamic var family = ""
+class Person: Object {
+    @objc dynamic var id = 0
     @objc dynamic var name = ""
+    @objc dynamic var posision = ""
+    @objc dynamic var createdAt: Double = 0
 }
