@@ -6,7 +6,7 @@ target 'RealmStudy' do
   use_frameworks!
 
   # Pods for RealmStudy
-  pod'Realm'
+  pod'RealmSwift'
   pod'Instantiate'
   pod'InstantiateStandard'
 
