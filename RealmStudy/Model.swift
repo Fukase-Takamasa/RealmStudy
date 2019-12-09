@@ -13,6 +13,6 @@ import InstantiateStandard
 class Person: Object {
     @objc dynamic var id = 0
     @objc dynamic var name = ""
-    @objc dynamic var posision = ""
+    @objc dynamic var position = ""
     @objc dynamic var createdAt: Double = 0
 }
