@@ -23,6 +23,7 @@ class ViewController: UIViewController, StoryboardInstantiatable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Realmのモデルを変更した時にマイグレーションをあげてDBに反映させる処理。
         realmMigration()
         
         TableViewUtil.registerCell(tableView, identifier: TableViewCell.reusableIdentifier)
@@ -35,6 +36,7 @@ class ViewController: UIViewController, StoryboardInstantiatable {
         print("personList:\(personList)")
         print("RealmDBの中身\(realm.objects(Person.self))")
 
+        //
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
@@ -57,13 +59,14 @@ class ViewController: UIViewController, StoryboardInstantiatable {
         }catch {
             print("アドできませんでした")
         }
+        tableView.reloadData()
     }
 }
 
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return personList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
