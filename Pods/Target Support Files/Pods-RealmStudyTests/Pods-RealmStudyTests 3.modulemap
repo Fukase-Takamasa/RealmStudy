@@ -1,6 +1,0 @@
-framework module Pods_RealmStudyTests {
-  umbrella header "Pods-RealmStudyTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

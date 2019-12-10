@@ -6,9 +6,9 @@ target 'RealmStudy' do
   use_frameworks!
 
   # Pods for RealmStudy
-  pod'RealmSwift'
   pod'Instantiate'
   pod'InstantiateStandard'
+  pod'RealmSwift'
 
   target 'RealmStudyTests' do
     inherit! :search_paths

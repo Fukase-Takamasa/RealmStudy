@@ -26,8 +26,8 @@ class ViewController: UIViewController {
         
     }
     @IBAction func addButton(_ sender: Any) {
-        let name = nameTextField.text ?? "名無し"
-        let position = positionTextField.text ?? "担当無し"
+        let name = nameTextField.text ?? ""
+        let position = positionTextField.text ?? ""
         addPerson(name: name, position: position)
     }
     
