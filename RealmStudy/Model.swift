@@ -16,3 +16,9 @@ class Person: Object {
     @objc dynamic var position = ""
     @objc dynamic var createdAt: Double = 0
 }
+
+func realmMigration() {
+    var config = Realm.Configuration()
+    config.schemaVersion = 2
+    Realm.Configuration.defaultConfiguration = config
+}

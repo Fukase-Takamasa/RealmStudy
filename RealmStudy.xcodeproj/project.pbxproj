@@ -18,6 +18,9 @@
 		5977AA4B239E328900176434 /* RealmStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA4A239E328900176434 /* RealmStudyTests.swift */; };
 		5977AA56239E328900176434 /* RealmStudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA55239E328900176434 /* RealmStudyUITests.swift */; };
 		5977AA64239E392600176434 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA63239E392600176434 /* Model.swift */; };
+		59DA61B2239F3C9D0064367E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DA61B0239F3C9D0064367E /* TableViewCell.swift */; };
+		59DA61B3239F3C9D0064367E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DA61B1239F3C9D0064367E /* TableViewCell.xib */; };
+		59DA61B5239F3EF20064367E /* TableViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DA61B4239F3EF20064367E /* TableViewUtil.swift */; };
 		9755E73636616C157F93C9B4 /* Pods_RealmStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64C668C6F39CF8B720E1B6C /* Pods_RealmStudyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,9 @@
 		5977AA55239E328900176434 /* RealmStudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStudyUITests.swift; sourceTree = "<group>"; };
 		5977AA57239E328900176434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5977AA63239E392600176434 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		59DA61B0239F3C9D0064367E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		59DA61B1239F3C9D0064367E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		59DA61B4239F3EF20064367E /* TableViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUtil.swift; sourceTree = "<group>"; };
 		74E0F4485FA28CE0E851A9EF /* Pods-RealmStudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudyTests.release.xcconfig"; path = "Target Support Files/Pods-RealmStudyTests/Pods-RealmStudyTests.release.xcconfig"; sourceTree = "<group>"; };
 		75372D0807308063231BF393 /* Pods-RealmStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudy.debug.xcconfig"; path = "Target Support Files/Pods-RealmStudy/Pods-RealmStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		85A3E18CA9EF6573ECFE46D0 /* Pods-RealmStudy-RealmStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudy-RealmStudyUITests.release.xcconfig"; path = "Target Support Files/Pods-RealmStudy-RealmStudyUITests/Pods-RealmStudy-RealmStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +142,9 @@
 				5977AA35239E328800176434 /* SceneDelegate.swift */,
 				5977AA37239E328800176434 /* ViewController.swift */,
 				5977AA39239E328800176434 /* Main.storyboard */,
+				59DA61B0239F3C9D0064367E /* TableViewCell.swift */,
+				59DA61B1239F3C9D0064367E /* TableViewCell.xib */,
+				59DA61B4239F3EF20064367E /* TableViewUtil.swift */,
 				5977AA3C239E328900176434 /* Assets.xcassets */,
 				5977AA3E239E328900176434 /* LaunchScreen.storyboard */,
 				5977AA41239E328900176434 /* Info.plist */,
@@ -281,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5977AA40239E328900176434 /* LaunchScreen.storyboard in Resources */,
+				59DA61B3239F3C9D0064367E /* TableViewCell.xib in Resources */,
 				5977AA3D239E328900176434 /* Assets.xcassets in Resources */,
 				5977AA3B239E328800176434 /* Main.storyboard in Resources */,
 			);
@@ -410,8 +420,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59DA61B2239F3C9D0064367E /* TableViewCell.swift in Sources */,
 				5977AA38239E328800176434 /* ViewController.swift in Sources */,
 				5977AA34239E328800176434 /* AppDelegate.swift in Sources */,
+				59DA61B5239F3EF20064367E /* TableViewUtil.swift in Sources */,
 				5977AA36239E328800176434 /* SceneDelegate.swift in Sources */,
 				5977AA64239E392600176434 /* Model.swift in Sources */,
 			);
