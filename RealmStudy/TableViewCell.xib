@@ -34,6 +34,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.77039762410000001" green="0.96130555870000001" blue="0.93676599360000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="2Hb-JU-uJJ"/>
                             <constraint firstAttribute="bottom" secondItem="xlt-xp-mYF" secondAttribute="bottom" constant="30" id="B27-QL-jER"/>
                             <constraint firstItem="xlt-xp-mYF" firstAttribute="centerX" secondItem="6Wo-hY-644" secondAttribute="centerX" id="Mxs-g3-Jwf"/>
                             <constraint firstItem="FkH-0g-cyB" firstAttribute="centerX" secondItem="6Wo-hY-644" secondAttribute="centerX" id="O0b-Tj-WLf"/>
@@ -49,7 +50,6 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.99676254101907946" green="1" blue="0.86058541962760216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="6Wo-hY-644" secondAttribute="bottom" constant="10" id="C5C-qc-gBS"/>
                     <constraint firstItem="6Wo-hY-644" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ct0-dl-CJE"/>
@@ -57,6 +57,7 @@
                     <constraint firstItem="6Wo-hY-644" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ywz-xf-SZD"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.99676254099999995" green="1" blue="0.86058541960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="label1" destination="xlt-xp-mYF" id="ej0-jf-bHz"/>

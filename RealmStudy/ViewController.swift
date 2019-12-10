@@ -12,7 +12,6 @@ import Instantiate
 import InstantiateStandard
 
 class ViewController: UIViewController, StoryboardInstantiatable {
-    let person = Person()
     var personList: Results<Person>?
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -23,9 +22,12 @@ class ViewController: UIViewController, StoryboardInstantiatable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Realmのモデルを変更した時にマイグレーションをあげてDBに反映させる処理。
+        //Realmのモデル定義を変更した時にマイグレーションをあげてDBに反映させる処理。
         realmMigration()
         
+        //編集ボタンを右側に表示(アニメーション付き）
+        self.navigationItem.setRightBarButton(self.editButtonItem, animated: true)
+    
         TableViewUtil.registerCell(tableView, identifier: TableViewCell.reusableIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -40,22 +42,16 @@ class ViewController: UIViewController, StoryboardInstantiatable {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
+    
     @IBAction func addButton(_ sender: Any) {
-        let name = nameTextField.text ?? ""
-        let position = positionTextField.text ?? ""
-        addPerson(name: name, position: position)
-    }
-    
-    
-    func addPerson(name: String, position: String) {
-        person.name = name
-        person.position = position
+        let newPerson = Person()
+        newPerson.name = nameTextField.text ?? ""
+        newPerson.position = positionTextField.text ?? ""
         do{
             let realm = try Realm()
             try realm.write {
-            realm.add(person)
+            realm.add(newPerson)
             }
-                
         }catch {
             print("アドできませんでした")
         }
@@ -81,9 +77,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        tableView.isEditing = editing
+    }
     
     
     
-    
+    //セルを削除（RealmDB内も削除）
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            //Realm内で削除
+            do {
+                let realm = try! Realm()
+                try realm.write {
+                    realm.delete((self.personList?[indexPath.row])!)
+                }
+                //tableView上のセルを削除
+                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            }catch {
+                
+            }
+        }
+    }
+
 }
 
