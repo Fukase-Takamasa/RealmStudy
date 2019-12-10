@@ -8,46 +8,104 @@
 
 import UIKit
 import RealmSwift
+import Instantiate
+import InstantiateStandard
 
-class ViewController: UIViewController {
-    let realm = try! Realm()
+class ViewController: UIViewController, StoryboardInstantiatable {
+    var personList: Results<Person>?
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var positionTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Realmのモデル定義を変更した時にマイグレーションをあげてDBに反映させる処理。
+        realmMigration()
         
+        //編集ボタンを右側に表示(アニメーション付き）
+        self.navigationItem.setRightBarButton(self.editButtonItem, animated: true)
+    
+        TableViewUtil.registerCell(tableView, identifier: TableViewCell.reusableIdentifier)
+        tableView.delegate = self
+        tableView.dataSource = self
         
+        let realm = try! Realm()
         
-        //print(Realm.Configuration.defaultConfiguration.fileURL!)
-        
+        personList = realm.objects(Person.self)
+        print("personList:\(personList)")
+        print("RealmDBの中身\(realm.objects(Person.self))")
+
+        //
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
+    
+    
     @IBAction func addButton(_ sender: Any) {
+<<<<<<< HEAD
         let name = nameTextField.text ?? ""
         let position = positionTextField.text ?? ""
         addPerson(name: name, position: position)
+=======
+        let newPerson = Person()
+        newPerson.name = nameTextField.text ?? ""
+        newPerson.position = positionTextField.text ?? ""
+        do{
+            let realm = try Realm()
+            try realm.write {
+            realm.add(newPerson)
+            }
+        }catch {
+            print("アドできませんでした")
+        }
+        tableView.reloadData()
+    }
+}
+
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return personList?.count ?? 0
+>>>>>>> a3e461c810aa0c1bed92c0f520d8793203d38279
     }
     
-    @IBAction func checkDB(_ sender: Any) {
-        let person = realm.objects(Person.self)
-        print(person)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reusableIdentifier, for: indexPath) as! TableViewCell
+        guard let personList = personList else {
+            return UITableViewCell()
+        }
+        let name = personList[indexPath.row].name
+        let position = personList[indexPath.row].position
+        cell.bindData(string1: name, string2: position)
         
+        return cell
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        tableView.isEditing = editing
     }
     
     
-    func addPerson(name: String, position: String) {
-        let person = Person()
-        person.name = name
-        person.position = position
-        try! realm.write {
-            realm.add(person)
+    
+    //セルを削除（RealmDB内も削除）
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            //Realm内で削除
+            do {
+                let realm = try! Realm()
+                try realm.write {
+                    realm.delete((self.personList?[indexPath.row])!)
+                }
+                //tableView上のセルを削除
+                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            }catch {
+                
+            }
         }
     }
-    
-    
-    
+
 }
 
