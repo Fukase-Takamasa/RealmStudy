@@ -16,11 +16,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="222" height="254"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6W-99-ngw">
-                        <rect key="frame" x="0.0" y="0.0" width="222" height="254"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6W-99-ngw" customClass="DesignableView" customModule="RealmStudy" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="202" height="234"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSe-cN-BhR">
-                                <rect key="frame" x="90" y="116.5" width="42" height="21"/>
+                                <rect key="frame" x="80" y="106.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,34 +28,58 @@
                         </subviews>
                         <color key="backgroundColor" red="0.77039762410000001" green="0.96130555870000001" blue="0.93676599360000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="dSe-cN-BhR" firstAttribute="centerY" secondItem="u6W-99-ngw" secondAttribute="centerY" id="Nqo-qw-t7m"/>
-                            <constraint firstItem="dSe-cN-BhR" firstAttribute="centerX" secondItem="u6W-99-ngw" secondAttribute="centerX" id="v9M-5t-sd5"/>
+                            <constraint firstItem="dSe-cN-BhR" firstAttribute="centerX" secondItem="u6W-99-ngw" secondAttribute="centerX" id="52g-Is-Xak"/>
+                            <constraint firstItem="dSe-cN-BhR" firstAttribute="centerY" secondItem="u6W-99-ngw" secondAttribute="centerY" id="fgs-CR-Ie8"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="10"/>
+                                <real key="value" value="12"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                 <size key="value" width="5" height="5"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                <real key="value" value="5"/>
+                                <real key="value" value="4"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                 <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" red="0.99676254099999995" green="1" blue="0.86058541960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="u6W-99-ngw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7kc-sv-xh8"/>
-                <constraint firstAttribute="bottom" secondItem="u6W-99-ngw" secondAttribute="bottom" id="Pyl-mC-GMv"/>
-                <constraint firstItem="u6W-99-ngw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aLT-6r-4Tm"/>
-                <constraint firstAttribute="trailing" secondItem="u6W-99-ngw" secondAttribute="trailing" id="wAh-1x-2oD"/>
+                <constraint firstAttribute="bottom" secondItem="u6W-99-ngw" secondAttribute="bottom" constant="10" id="Dzn-J9-1OW"/>
+                <constraint firstItem="u6W-99-ngw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="E1K-en-E3l"/>
+                <constraint firstItem="u6W-99-ngw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="TQt-Sm-5Uo"/>
+                <constraint firstAttribute="trailing" secondItem="u6W-99-ngw" secondAttribute="trailing" constant="10" id="UFi-Ba-6zN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="133" height="135"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                    <size key="value" width="3" height="3"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="197.82608695652175" y="144.97767857142856"/>
         </collectionViewCell>
     </objects>
