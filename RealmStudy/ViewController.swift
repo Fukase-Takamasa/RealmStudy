@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
+import RxCocoa
 import Instantiate
 import InstantiateStandard
 
@@ -18,12 +20,26 @@ class ViewController: UIViewController, StoryboardInstantiatable {
     @IBOutlet weak var positionTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var testLabel1: UILabel!
+    @IBOutlet weak var testLabel2: UILabel!
     
+    
+    //観測状態からの解放を行う際に使う
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //Realmのモデル定義を変更した時にマイグレーションをあげてDBに反映させる処理。
         realmMigration()
+        
+        let nameObservable: Observable<String?> = nameTextField.rx.text.asObservable()
+        let positionObservable: Observable<String?> = positionTextField.rx.text.asObservable()
+        
+        nameObservable.bindTo(testLabel1.rx.text).addDisposableTo(disposeBag)
+        positionObservable.bindTo(testLabel2.rx.text).addDisposableTo(disposeBag)
+        
+        
+        
         
         //編集ボタンを右側に表示(アニメーション付き）
         self.navigationItem.setRightBarButton(self.editButtonItem, animated: true)
@@ -58,6 +74,8 @@ class ViewController: UIViewController, StoryboardInstantiatable {
         tableView.reloadData()
     }
 }
+
+
 
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

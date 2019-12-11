@@ -7,6 +7,8 @@ target 'RealmStudy' do
 
   # Pods for RealmStudy
   pod'RealmSwift'
+  pod'RxSwift'
+  pod'RxCocoa'
   pod'Instantiate'
   pod'InstantiateStandard'
 
