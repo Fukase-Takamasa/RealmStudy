@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5735F2618167F27C83A146FF /* Pods_RealmStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707EC60C7AC95C90596D3FE3 /* Pods_RealmStudy.framework */; };
+		591316B823A0ECC300177815 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591316B723A0ECC300177815 /* CollectionViewController.swift */; };
+		591316BC23A0F19700177815 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591316BB23A0F19700177815 /* Main.swift */; };
+		591316BE23A0F1E100177815 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591316BD23A0F1E100177815 /* ViewController.storyboard */; };
+		591316C023A0F20E00177815 /* CollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591316BF23A0F20E00177815 /* CollectionViewController.storyboard */; };
+		591316C323A0F5B700177815 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591316C123A0F5B700177815 /* CollectionViewCell.swift */; };
+		591316C423A0F5B700177815 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591316C223A0F5B700177815 /* CollectionViewCell.xib */; };
 		5977AA34239E328800176434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA33239E328800176434 /* AppDelegate.swift */; };
 		5977AA36239E328800176434 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA35239E328800176434 /* SceneDelegate.swift */; };
 		5977AA38239E328800176434 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA37239E328800176434 /* ViewController.swift */; };
@@ -45,6 +51,12 @@
 		0B952AA9586E7BAF4C7CFADF /* Pods-RealmStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudyTests.debug.xcconfig"; path = "Target Support Files/Pods-RealmStudyTests/Pods-RealmStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D4109157AC7E927E7774BFB /* Pods_RealmStudy_RealmStudyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmStudy_RealmStudyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EED1897C09D941CDB612B7 /* Pods-RealmStudy-RealmStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudy-RealmStudyUITests.release.xcconfig"; path = "Target Support Files/Pods-RealmStudy-RealmStudyUITests/Pods-RealmStudy-RealmStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		591316B723A0ECC300177815 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		591316BB23A0F19700177815 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		591316BD23A0F1E100177815 /* ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewController.storyboard; sourceTree = "<group>"; };
+		591316BF23A0F20E00177815 /* CollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewController.storyboard; sourceTree = "<group>"; };
+		591316C123A0F5B700177815 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		591316C223A0F5B700177815 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		5977AA30239E328800176434 /* RealmStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5977AA33239E328800176434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5977AA35239E328800176434 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,10 +160,16 @@
 			isa = PBXGroup;
 			children = (
 				5977AA33239E328800176434 /* AppDelegate.swift */,
-				5977AA63239E392600176434 /* Model.swift */,
 				5977AA35239E328800176434 /* SceneDelegate.swift */,
-				5977AA37239E328800176434 /* ViewController.swift */,
+				591316BB23A0F19700177815 /* Main.swift */,
 				5977AA39239E328800176434 /* Main.storyboard */,
+				5977AA63239E392600176434 /* Model.swift */,
+				5977AA37239E328800176434 /* ViewController.swift */,
+				591316BD23A0F1E100177815 /* ViewController.storyboard */,
+				591316B723A0ECC300177815 /* CollectionViewController.swift */,
+				591316BF23A0F20E00177815 /* CollectionViewController.storyboard */,
+				591316C123A0F5B700177815 /* CollectionViewCell.swift */,
+				591316C223A0F5B700177815 /* CollectionViewCell.xib */,
 				59DA61B0239F3C9D0064367E /* TableViewCell.swift */,
 				59DA61B1239F3C9D0064367E /* TableViewCell.xib */,
 				59DA61B4239F3EF20064367E /* TableViewUtil.swift */,
@@ -290,7 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5977AA40239E328900176434 /* LaunchScreen.storyboard in Resources */,
+				591316C423A0F5B700177815 /* CollectionViewCell.xib in Resources */,
+				591316BE23A0F1E100177815 /* ViewController.storyboard in Resources */,
 				59DA61B3239F3C9D0064367E /* TableViewCell.xib in Resources */,
+				591316C023A0F20E00177815 /* CollectionViewController.storyboard in Resources */,
 				5977AA3D239E328900176434 /* Assets.xcassets in Resources */,
 				5977AA3B239E328800176434 /* Main.storyboard in Resources */,
 			);
@@ -422,8 +443,11 @@
 			files = (
 				59DA61B2239F3C9D0064367E /* TableViewCell.swift in Sources */,
 				5977AA38239E328800176434 /* ViewController.swift in Sources */,
+				591316C323A0F5B700177815 /* CollectionViewCell.swift in Sources */,
+				591316BC23A0F19700177815 /* Main.swift in Sources */,
 				5977AA34239E328800176434 /* AppDelegate.swift in Sources */,
 				59DA61B5239F3EF20064367E /* TableViewUtil.swift in Sources */,
+				591316B823A0ECC300177815 /* CollectionViewController.swift in Sources */,
 				5977AA36239E328800176434 /* SceneDelegate.swift in Sources */,
 				5977AA64239E392600176434 /* Model.swift in Sources */,
 			);
