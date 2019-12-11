@@ -9,6 +9,8 @@ target 'RealmStudy' do
   pod'RealmSwift'
   pod'Instantiate'
   pod'InstantiateStandard'
+  pod'RxSwift'
+  pod'RxCocoa'
 
   target 'RealmStudyTests' do
     inherit! :search_paths

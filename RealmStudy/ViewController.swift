@@ -10,6 +10,8 @@ import UIKit
 import RealmSwift
 import Instantiate
 import InstantiateStandard
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController, StoryboardInstantiatable {
     var personList: Results<Person>?
@@ -24,6 +26,9 @@ class ViewController: UIViewController, StoryboardInstantiatable {
         super.viewDidLoad()
         //Realmのモデル定義を変更した時にマイグレーションをあげてDBに反映させる処理。
         realmMigration()
+        
+        
+        
         
         //編集ボタンを右側に表示(アニメーション付き）
         self.navigationItem.setRightBarButton(self.editButtonItem, animated: true)
