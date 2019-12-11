@@ -60,6 +60,11 @@ class ViewController: UIViewController, StoryboardInstantiatable {
     
     
     @IBAction func addButton(_ sender: Any) {
+<<<<<<< HEAD
+        let name = nameTextField.text ?? ""
+        let position = positionTextField.text ?? ""
+        addPerson(name: name, position: position)
+=======
         let newPerson = Person()
         newPerson.name = nameTextField.text ?? ""
         newPerson.position = positionTextField.text ?? ""
@@ -81,6 +86,7 @@ class ViewController: UIViewController, StoryboardInstantiatable {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return personList?.count ?? 0
+>>>>>>> a3e461c810aa0c1bed92c0f520d8793203d38279
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

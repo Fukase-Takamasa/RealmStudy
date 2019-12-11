@@ -6,11 +6,15 @@ target 'RealmStudy' do
   use_frameworks!
 
   # Pods for RealmStudy
+<<<<<<< HEAD
   pod'RealmSwift'
   pod'RxSwift'
   pod'RxCocoa'
+=======
+>>>>>>> ca991b58dafa28849b3f9bc8349f2a9d9263466c
   pod'Instantiate'
   pod'InstantiateStandard'
+  pod'RealmSwift'
 
   target 'RealmStudyTests' do
     inherit! :search_paths
