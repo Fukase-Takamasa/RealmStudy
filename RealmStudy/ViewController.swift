@@ -22,7 +22,7 @@ class ViewController: UIViewController, StoryboardInstantiatable {
     @IBOutlet weak var testLabel1: UILabel!
     @IBOutlet weak var testLabel2: UILabel!
     
-    
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +32,8 @@ class ViewController: UIViewController, StoryboardInstantiatable {
         let nameObservable: Observable<String?> = nameTextField.rx.text.asObservable()
         let positionObservable: Observable<String?> = positionTextField.rx.text.asObservable()
         
-        nameObservable.bindTo(testLabel1.rx.text).addDisposableTo(DisposeBag)
-        positionObservable.bindTo(testLabel2.rx.text).addDisposableTo(DisposeBag)
+        nameObservable.bind(to: testLabel1.rx.text).disposed(by: disposeBag)
+        positionObservable.bind(to: testLabel2.rx.text).disposed(by: disposeBag)
         
         
         //編集ボタンを右側に表示(アニメーション付き）
