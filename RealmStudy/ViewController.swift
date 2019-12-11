@@ -19,6 +19,8 @@ class ViewController: UIViewController, StoryboardInstantiatable {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var positionTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var testLabel1: UILabel!
+    @IBOutlet weak var testLabel2: UILabel!
     
     
 
@@ -27,7 +29,11 @@ class ViewController: UIViewController, StoryboardInstantiatable {
         //Realmのモデル定義を変更した時にマイグレーションをあげてDBに反映させる処理。
         realmMigration()
         
+        let nameObservable: Observable<String?> = nameTextField.rx.text.asObservable()
+        let positionObservable: Observable<String?> = positionTextField.rx.text.asObservable()
         
+        nameObservable.bindTo(testLabel1.rx.text).addDisposableTo(DisposeBag)
+        positionObservable.bindTo(testLabel2.rx.text).addDisposableTo(DisposeBag)
         
         
         //編集ボタンを右側に表示(アニメーション付き）
