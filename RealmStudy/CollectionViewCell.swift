@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Instantiate
+import InstantiateStandard
 
-class CollectionViewCell: UICollectionViewCell {
+
+class CollectionViewCell: UICollectionViewCell, Reusable {
 
     override func awakeFromNib() {
         super.awakeFromNib()

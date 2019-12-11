@@ -14,6 +14,8 @@
 		591316C023A0F20E00177815 /* CollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591316BF23A0F20E00177815 /* CollectionViewController.storyboard */; };
 		591316C323A0F5B700177815 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591316C123A0F5B700177815 /* CollectionViewCell.swift */; };
 		591316C423A0F5B700177815 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591316C223A0F5B700177815 /* CollectionViewCell.xib */; };
+		5939C77823A0FACF000A204C /* CollectionViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939C77723A0FACF000A204C /* CollectionViewUtil.swift */; };
+		5939C77A23A0FF33000A204C /* Extension+StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939C77923A0FF33000A204C /* Extension+StoryBoard.swift */; };
 		5977AA34239E328800176434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA33239E328800176434 /* AppDelegate.swift */; };
 		5977AA36239E328800176434 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA35239E328800176434 /* SceneDelegate.swift */; };
 		5977AA38239E328800176434 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA37239E328800176434 /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 		591316BF23A0F20E00177815 /* CollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewController.storyboard; sourceTree = "<group>"; };
 		591316C123A0F5B700177815 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		591316C223A0F5B700177815 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		5939C77723A0FACF000A204C /* CollectionViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewUtil.swift; sourceTree = "<group>"; };
+		5939C77923A0FF33000A204C /* Extension+StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+StoryBoard.swift"; sourceTree = "<group>"; };
 		5977AA30239E328800176434 /* RealmStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5977AA33239E328800176434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5977AA35239E328800176434 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 				5977AA33239E328800176434 /* AppDelegate.swift */,
 				5977AA35239E328800176434 /* SceneDelegate.swift */,
 				591316BB23A0F19700177815 /* Main.swift */,
+				5939C77923A0FF33000A204C /* Extension+StoryBoard.swift */,
 				5977AA39239E328800176434 /* Main.storyboard */,
 				5977AA63239E392600176434 /* Model.swift */,
 				5977AA37239E328800176434 /* ViewController.swift */,
@@ -173,6 +178,7 @@
 				59DA61B0239F3C9D0064367E /* TableViewCell.swift */,
 				59DA61B1239F3C9D0064367E /* TableViewCell.xib */,
 				59DA61B4239F3EF20064367E /* TableViewUtil.swift */,
+				5939C77723A0FACF000A204C /* CollectionViewUtil.swift */,
 				5977AA3C239E328900176434 /* Assets.xcassets */,
 				5977AA3E239E328900176434 /* LaunchScreen.storyboard */,
 				5977AA41239E328900176434 /* Info.plist */,
@@ -445,9 +451,11 @@
 				5977AA38239E328800176434 /* ViewController.swift in Sources */,
 				591316C323A0F5B700177815 /* CollectionViewCell.swift in Sources */,
 				591316BC23A0F19700177815 /* Main.swift in Sources */,
+				5939C77823A0FACF000A204C /* CollectionViewUtil.swift in Sources */,
 				5977AA34239E328800176434 /* AppDelegate.swift in Sources */,
 				59DA61B5239F3EF20064367E /* TableViewUtil.swift in Sources */,
 				591316B823A0ECC300177815 /* CollectionViewController.swift in Sources */,
+				5939C77A23A0FF33000A204C /* Extension+StoryBoard.swift in Sources */,
 				5977AA36239E328800176434 /* SceneDelegate.swift in Sources */,
 				5977AA64239E392600176434 /* Model.swift in Sources */,
 			);
