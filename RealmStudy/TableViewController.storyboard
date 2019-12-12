@@ -10,7 +10,7 @@
         <!--バンドメンバー-->
         <scene sceneID="ME3-E7-0Hr">
             <objects>
-                <viewController id="H4P-im-Icp" customClass="ViewController" customModule="RealmStudy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="H4P-im-Icp" customClass="TableViewController" customModule="RealmStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oBb-Ys-VbD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

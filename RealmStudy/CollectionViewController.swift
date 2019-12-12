@@ -21,7 +21,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -35,23 +35,29 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
 }
 
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    //セクションの外側余白
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
+    //セルサイズ
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = self.collectionView.bounds.width - 32 - 16
-        let cellHeight = self.collectionView.bounds.height - 32 - 32
+        let cellWidth = self.collectionView.bounds.width
+        let cellHeight = self.collectionView.bounds.height
         return CGSize(width: cellWidth / 2, height: cellHeight / 3)
     }
     
-    
+    //列間の余白（□□□
+    //
+    //　　　　　　□□□）
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 16
+        return 0
     }
     
+    //行間の余白（□ ＜ー＞　□）？？
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 16
+        return 0
     }
     
 }

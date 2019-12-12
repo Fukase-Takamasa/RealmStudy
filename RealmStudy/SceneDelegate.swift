@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 switch value {
                 case let (0, nc as UINavigationController):
                     print("case1")
-                    let firstVC = ViewController.instantiate()
+                    let firstVC = TableViewController.instantiate()
                     nc.setViewControllers([firstVC], animated: false)
                 case let (1, nc as UINavigationController):
                     print("case1")

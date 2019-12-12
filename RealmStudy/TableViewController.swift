@@ -13,7 +13,7 @@ import InstantiateStandard
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController, StoryboardInstantiatable {
+class TableViewController: UIViewController, StoryboardInstantiatable {
     var personList: Results<Person>?
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -71,7 +71,7 @@ class ViewController: UIViewController, StoryboardInstantiatable {
 }
 
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return personList?.count ?? 0
     }
