@@ -17,9 +17,17 @@ class Person: Object {
     @objc dynamic var createdAt: Double = 0
 }
 
+class Person2: Object {
+    @objc dynamic var name = ""
+    @objc dynamic var title = ""
+    @objc dynamic var body = ""
+}
 
 func realmMigration() {
     var config = Realm.Configuration()
-    config.schemaVersion = 2
+    config.schemaVersion = 3
     Realm.Configuration.defaultConfiguration = config
 }
+
+
+

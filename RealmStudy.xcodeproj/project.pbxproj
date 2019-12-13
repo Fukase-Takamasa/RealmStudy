@@ -25,6 +25,8 @@
 		5977AA4B239E328900176434 /* RealmStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA4A239E328900176434 /* RealmStudyTests.swift */; };
 		5977AA56239E328900176434 /* RealmStudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA55239E328900176434 /* RealmStudyUITests.swift */; };
 		5977AA64239E392600176434 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA63239E392600176434 /* Model.swift */; };
+		5987FC1423A384270027FB5A /* RegisterPersonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5987FC1323A384270027FB5A /* RegisterPersonViewController.storyboard */; };
+		5987FC1623A384760027FB5A /* RegisterPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987FC1523A384760027FB5A /* RegisterPersonViewController.swift */; };
 		59DA61B2239F3C9D0064367E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DA61B0239F3C9D0064367E /* TableViewCell.swift */; };
 		59DA61B3239F3C9D0064367E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DA61B1239F3C9D0064367E /* TableViewCell.xib */; };
 		59DA61B5239F3EF20064367E /* TableViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DA61B4239F3EF20064367E /* TableViewUtil.swift */; };
@@ -76,6 +78,8 @@
 		5977AA55239E328900176434 /* RealmStudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStudyUITests.swift; sourceTree = "<group>"; };
 		5977AA57239E328900176434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5977AA63239E392600176434 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5987FC1323A384270027FB5A /* RegisterPersonViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterPersonViewController.storyboard; sourceTree = "<group>"; };
+		5987FC1523A384760027FB5A /* RegisterPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPersonViewController.swift; sourceTree = "<group>"; };
 		59DA61B0239F3C9D0064367E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		59DA61B1239F3C9D0064367E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		59DA61B4239F3EF20064367E /* TableViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUtil.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				591316BD23A0F1E100177815 /* TableViewController.storyboard */,
 				591316B723A0ECC300177815 /* CollectionViewController.swift */,
 				591316BF23A0F20E00177815 /* CollectionViewController.storyboard */,
+				5987FC1523A384760027FB5A /* RegisterPersonViewController.swift */,
+				5987FC1323A384270027FB5A /* RegisterPersonViewController.storyboard */,
 				591316C123A0F5B700177815 /* CollectionViewCell.swift */,
 				591316C223A0F5B700177815 /* CollectionViewCell.xib */,
 				59DA61B0239F3C9D0064367E /* TableViewCell.swift */,
@@ -317,6 +323,7 @@
 				591316C423A0F5B700177815 /* CollectionViewCell.xib in Resources */,
 				591316BE23A0F1E100177815 /* TableViewController.storyboard in Resources */,
 				59DA61B3239F3C9D0064367E /* TableViewCell.xib in Resources */,
+				5987FC1423A384270027FB5A /* RegisterPersonViewController.storyboard in Resources */,
 				591316C023A0F20E00177815 /* CollectionViewController.storyboard in Resources */,
 				5977AA3D239E328900176434 /* Assets.xcassets in Resources */,
 				5977AA3B239E328800176434 /* Main.storyboard in Resources */,
@@ -447,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5987FC1623A384760027FB5A /* RegisterPersonViewController.swift in Sources */,
 				59DA61B2239F3C9D0064367E /* TableViewCell.swift in Sources */,
 				5977AA38239E328800176434 /* TableViewController.swift in Sources */,
 				591316C323A0F5B700177815 /* CollectionViewCell.swift in Sources */,

@@ -29,12 +29,13 @@ class TableViewController: UIViewController, StoryboardInstantiatable {
         //Realmのモデル定義を変更した時にマイグレーションをあげてDBに反映させる処理。
         realmMigration()
         
+        //Rxのbindの練習（UITextFieldを監視対象に登録）
         let nameObservable: Observable<String?> = nameTextField.rx.text.asObservable()
         let positionObservable: Observable<String?> = positionTextField.rx.text.asObservable()
         
+        //bindを反映させる
         nameObservable.bind(to: testLabel1.rx.text).disposed(by: disposeBag)
         positionObservable.bind(to: testLabel2.rx.text).disposed(by: disposeBag)
-        
         
         //編集ボタンを右側に表示(アニメーション付き）
         self.navigationItem.setRightBarButton(self.editButtonItem, animated: true)
@@ -47,9 +48,9 @@ class TableViewController: UIViewController, StoryboardInstantiatable {
         
         personList = realm.objects(Person.self)
         print("personList:\(personList)")
-        print("RealmDBの中身\(realm.objects(Person.self))")
+        print("RealmDBの中身:\(realm.objects(Person.self))")
 
-        //
+        //RealmBrowserで中身を参照するためのファイルの保存場所を取得する
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     

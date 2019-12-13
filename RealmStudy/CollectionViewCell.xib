@@ -151,6 +151,11 @@
                     <size key="value" width="3" height="3"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="bodyLabel" destination="was-qj-yi9" id="ddq-7i-Wjl"/>
+                <outlet property="nameLabel" destination="dSe-cN-BhR" id="ZMT-Nt-BFR"/>
+                <outlet property="titleLabel" destination="d8t-a7-rdG" id="MXw-Qx-YEh"/>
+            </connections>
             <point key="canvasLocation" x="185.50724637681162" y="141.29464285714286"/>
         </collectionViewCell>
     </objects>

@@ -7,18 +7,38 @@
 //
 
 import UIKit
+import RealmSwift
 import Instantiate
 import InstantiateStandard
 
 class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, StoryboardInstantiatable {
-    
+    //RealmDBから取得したデータを辞書のように参照するための箱
+    var person2List: Results<Person2>?
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var addPersonButton: UIBarButtonItem!
+    @IBAction func addPersonButton(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let registerPerson = storyboard.instantiateViewController(identifier: "RegisterPerson")
+        self.present(registerPerson, animated: true, completion: nil)
+    }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         CollectionViewUtil.registerCell(collectionView, identifier: CollectionViewCell.reusableIdentifier)
+        
+        let realm = try! Realm()
+        person2List = realm.objects(Person2.self)
+        print("person2List:\(person2List)")
+        print("RealmDBの中身:\(realm.objects(Person2.self))")
+        //RealmBrowserで中身を参照するためのファイルの保存場所を取得する
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 6

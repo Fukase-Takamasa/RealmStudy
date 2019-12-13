@@ -40,8 +40,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kh1-JJ-JDI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xjZ-DB-sQm"/>
+                    <navigationItem key="navigationItem" id="xjZ-DB-sQm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="W63-n8-YcE">
+                            <connections>
+                                <action selector="addPersonButton:" destination="iXK-SK-lHi" id="1lb-8p-Yko"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addPersonButton" destination="W63-n8-YcE" id="NwX-xV-WEf"/>
                         <outlet property="collectionView" destination="tU6-MY-OJx" id="KRS-gl-DSb"/>
                     </connections>
                 </viewController>
