@@ -41,21 +41,26 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return person2List?.count ?? 0
     }
     
+    //セルの内容
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reusableIdentifier, for: indexPath)
-        
-        if let cell = cell as? CollectionViewCell {
-            
+        let cell: CollectionViewCell =  collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reusableIdentifier, for: indexPath) as! CollectionViewCell
+        guard let person2List = person2List else {
+            return UICollectionViewCell()
         }
+        let name = person2List[indexPath.row].name
+        let title = person2List[indexPath.row].title
+        let body = person2List[indexPath.row].body
+        cell.bindData(string1: name, string2: title, string3: body)
         return cell
     }
 }
 
+
+
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
-    
     //セクションの外側余白
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)

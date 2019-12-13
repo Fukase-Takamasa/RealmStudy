@@ -22,6 +22,8 @@ class CollectionViewCell: UICollectionViewCell, Reusable {
     }
     
     
+    
+    
     func bindData(string1: String, string2: String, string3: String) {
         nameLabel.text = string1
         titleLabel.text = string2

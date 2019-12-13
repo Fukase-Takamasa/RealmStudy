@@ -7,24 +7,33 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RegisterPersonViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var bodyTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func registerButton(_ sender: Any) {
+        let newPerson = Person2()
+        newPerson.name = nameTextField.text ?? ""
+        newPerson.title = titleTextField.text ?? ""
+        newPerson.body = bodyTextField.text ?? ""
+        do{
+            let realm = try Realm()
+            try realm.write {
+            realm.add(newPerson)
+            }
+        }catch {
+            print("アドできませんでした")
+        }
+        self.dismiss(animated: false, completion: nil)
     }
-    */
 
 }
