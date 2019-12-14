@@ -22,7 +22,7 @@ DEPENDENCIES:
   - RxSwift
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - Instantiate
     - InstantiateStandard
     - Realm
@@ -42,4 +42,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: e07e2fac0a84586b06f903a61ad45e986667ba0d
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.7.5

@@ -17,13 +17,25 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addPersonButton: UIBarButtonItem!
+    
     @IBAction func addPersonButton(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
-        let registerPerson = storyboard.instantiateViewController(identifier: "RegisterPerson")
-        self.present(registerPerson, animated: true, completion: nil)
+        
+        let registerPersonVc: UIStoryboard! = UIStoryboard(name: "RegisterPersonViewController", bundle: nil)
+        let identifier: String! = "RegisterPerson"
+        let nextVc = registerPersonVc.instantiateViewController(withIdentifier: identifier)
+        self.present(nextVc, animated: true, completion: nil)
+        
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.collectionView.reloadData()
+        print("もうすぐ開きます")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("開きました")
+    }
     
     
     override func viewDidLoad() {

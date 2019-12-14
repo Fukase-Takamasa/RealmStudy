@@ -57,8 +57,8 @@ class TableViewController: UIViewController, StoryboardInstantiatable {
     
     @IBAction func addButton(_ sender: Any) {
         let newPerson = Person()
-        newPerson.name = nameTextField.text ?? ""
-        newPerson.position = positionTextField.text ?? ""
+        newPerson.name = nameTextField?.text ?? ""
+        newPerson.position = positionTextField?.text ?? ""
         do{
             let realm = try Realm()
             try realm.write {
