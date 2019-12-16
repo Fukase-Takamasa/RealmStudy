@@ -11,6 +11,8 @@ target 'RealmStudy' do
   pod'InstantiateStandard'
   pod'RxSwift'
   pod'RxCocoa'
+  pod'Hero' 
+  pod'IQKeyboardManagerSwift'
 
   target 'RealmStudyTests' do
     inherit! :search_paths
