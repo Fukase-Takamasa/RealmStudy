@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   //              }
     //    })
 //aaaa
+        //bbbb
     //    Realm.Configuration.defaultConfiguration = config
         return true
         
