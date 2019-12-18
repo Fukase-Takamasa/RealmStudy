@@ -28,6 +28,6 @@ class Person2: Object {
     //config.schemaVersion = 3
     //Realm.Configuration.defaultConfiguration = config
 //}
-
+//ああああ
 
 
