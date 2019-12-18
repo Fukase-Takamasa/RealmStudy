@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,16 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        //let config = Realm.Configuration(
-          //  schemaVersion: 3,
-            //migrationBlock: { migration, oldScheamVersion in
-              //  if (oldScheamVersion < 3) {
-//////
-  //              }
-    //    })
+        //Override point for customization after application launch.
+        let config = Realm.Configuration(
+            schemaVersion: 3,
+            migrationBlock: { migration, oldScheamVersion in
+                if (oldScheamVersion < 3) {
 
-    //    Realm.Configuration.defaultConfiguration = config
+                }
+        })
+
+        Realm.Configuration.defaultConfiguration = config
         return true
         
     }

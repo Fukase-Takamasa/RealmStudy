@@ -23,11 +23,11 @@ class Person2: Object {
     @objc dynamic var body = ""
 }
 
-func realmMigration() {
-    var config = Realm.Configuration()
-    config.schemaVersion = 3
-    Realm.Configuration.defaultConfiguration = config
-}
+//func realmMigration() {
+    //var config = Realm.Configuration()
+    //config.schemaVersion = 3
+    //Realm.Configuration.defaultConfiguration = config
+//}
 
 
 
