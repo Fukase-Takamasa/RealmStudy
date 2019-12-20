@@ -28,10 +28,13 @@
 		5977AA64239E392600176434 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977AA63239E392600176434 /* RealmModel.swift */; };
 		5987FC1423A384270027FB5A /* RegisterPersonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5987FC1323A384270027FB5A /* RegisterPersonViewController.storyboard */; };
 		5987FC1623A384760027FB5A /* RegisterPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987FC1523A384760027FB5A /* RegisterPersonViewController.swift */; };
-		59A2E45823AB8A13003511F2 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A2E45723AB8A12003511F2 /* TableViewModel.swift */; };
+		59A2E45823AB8A13003511F2 /* RxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A2E45723AB8A12003511F2 /* RxViewModel.swift */; };
 		59DA61B2239F3C9D0064367E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DA61B0239F3C9D0064367E /* TableViewCell.swift */; };
 		59DA61B3239F3C9D0064367E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DA61B1239F3C9D0064367E /* TableViewCell.xib */; };
 		59DA61B5239F3EF20064367E /* TableViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DA61B4239F3EF20064367E /* TableViewUtil.swift */; };
+		59E7F72723AC76C100293B93 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7F72623AC76C100293B93 /* RxViewController.swift */; };
+		59E7F72923AC76F200293B93 /* RxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7F72823AC76F200293B93 /* RxModel.swift */; };
+		59E7F72B23AC772200293B93 /* RxViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E7F72A23AC772200293B93 /* RxViewController.storyboard */; };
 		C4530A98006C3B3DA3CEBA6F /* Pods_RealmStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DACAB14474D8B98FEE88AA9 /* Pods_RealmStudyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,10 +85,13 @@
 		5977AA63239E392600176434 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		5987FC1323A384270027FB5A /* RegisterPersonViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterPersonViewController.storyboard; sourceTree = "<group>"; };
 		5987FC1523A384760027FB5A /* RegisterPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPersonViewController.swift; sourceTree = "<group>"; };
-		59A2E45723AB8A12003511F2 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		59A2E45723AB8A12003511F2 /* RxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewModel.swift; sourceTree = "<group>"; };
 		59DA61B0239F3C9D0064367E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		59DA61B1239F3C9D0064367E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		59DA61B4239F3EF20064367E /* TableViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUtil.swift; sourceTree = "<group>"; };
+		59E7F72623AC76C100293B93 /* RxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
+		59E7F72823AC76F200293B93 /* RxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxModel.swift; sourceTree = "<group>"; };
+		59E7F72A23AC772200293B93 /* RxViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RxViewController.storyboard; sourceTree = "<group>"; };
 		5A42E47F4FAAFC0E9CA32397 /* Pods-RealmStudy-RealmStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudy-RealmStudyUITests.release.xcconfig"; path = "Target Support Files/Pods-RealmStudy-RealmStudyUITests/Pods-RealmStudy-RealmStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6CB28BD1756E9163B391F7C6 /* Pods-RealmStudy-RealmStudyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudy-RealmStudyUITests.debug.xcconfig"; path = "Target Support Files/Pods-RealmStudy-RealmStudyUITests/Pods-RealmStudy-RealmStudyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		934DEE65FCD309BAAE127BCC /* Pods_RealmStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,22 +168,13 @@
 				5977AA33239E328800176434 /* AppDelegate.swift */,
 				5977AA35239E328800176434 /* SceneDelegate.swift */,
 				591316BB23A0F19700177815 /* Main.swift */,
-				5939C77923A0FF33000A204C /* Extension+StoryBoard.swift */,
 				5977AA39239E328800176434 /* Main.storyboard */,
 				5977AA63239E392600176434 /* RealmModel.swift */,
-				59A2E45723AB8A12003511F2 /* TableViewModel.swift */,
-				5977AA37239E328800176434 /* TableViewController.swift */,
-				591316BD23A0F1E100177815 /* TableViewController.storyboard */,
-				591316B723A0ECC300177815 /* CollectionViewController.swift */,
-				591316BF23A0F20E00177815 /* CollectionViewController.storyboard */,
-				5987FC1523A384760027FB5A /* RegisterPersonViewController.swift */,
-				5987FC1323A384270027FB5A /* RegisterPersonViewController.storyboard */,
-				591316C123A0F5B700177815 /* CollectionViewCell.swift */,
-				591316C223A0F5B700177815 /* CollectionViewCell.xib */,
-				59DA61B0239F3C9D0064367E /* TableViewCell.swift */,
-				59DA61B1239F3C9D0064367E /* TableViewCell.xib */,
-				59DA61B4239F3EF20064367E /* TableViewUtil.swift */,
-				5939C77723A0FACF000A204C /* CollectionViewUtil.swift */,
+				59E7F72423AC751300293B93 /* Extension */,
+				59E7F72323AC750900293B93 /* Utility */,
+				59E7F72523AC751E00293B93 /* Model */,
+				59E7F72123AC741B00293B93 /* ViewModel */,
+				59E7F72223AC743200293B93 /* View */,
 				5977AA3C239E328900176434 /* Assets.xcassets */,
 				5977AA3E239E328900176434 /* LaunchScreen.storyboard */,
 				5977AA41239E328900176434 /* Info.plist */,
@@ -201,6 +198,58 @@
 				5977AA57239E328900176434 /* Info.plist */,
 			);
 			path = RealmStudyUITests;
+			sourceTree = "<group>";
+		};
+		59E7F72123AC741B00293B93 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				59A2E45723AB8A12003511F2 /* RxViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		59E7F72223AC743200293B93 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5977AA37239E328800176434 /* TableViewController.swift */,
+				591316BD23A0F1E100177815 /* TableViewController.storyboard */,
+				59DA61B0239F3C9D0064367E /* TableViewCell.swift */,
+				59DA61B1239F3C9D0064367E /* TableViewCell.xib */,
+				591316B723A0ECC300177815 /* CollectionViewController.swift */,
+				591316BF23A0F20E00177815 /* CollectionViewController.storyboard */,
+				591316C123A0F5B700177815 /* CollectionViewCell.swift */,
+				591316C223A0F5B700177815 /* CollectionViewCell.xib */,
+				5987FC1523A384760027FB5A /* RegisterPersonViewController.swift */,
+				5987FC1323A384270027FB5A /* RegisterPersonViewController.storyboard */,
+				59E7F72623AC76C100293B93 /* RxViewController.swift */,
+				59E7F72A23AC772200293B93 /* RxViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		59E7F72323AC750900293B93 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				59DA61B4239F3EF20064367E /* TableViewUtil.swift */,
+				5939C77723A0FACF000A204C /* CollectionViewUtil.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		59E7F72423AC751300293B93 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5939C77923A0FF33000A204C /* Extension+StoryBoard.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		59E7F72523AC751E00293B93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59E7F72823AC76F200293B93 /* RxModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EAFEABFD126EA99C83606437 /* Frameworks */ = {
@@ -325,6 +374,7 @@
 				5977AA40239E328900176434 /* LaunchScreen.storyboard in Resources */,
 				591316C423A0F5B700177815 /* CollectionViewCell.xib in Resources */,
 				591316BE23A0F1E100177815 /* TableViewController.storyboard in Resources */,
+				59E7F72B23AC772200293B93 /* RxViewController.storyboard in Resources */,
 				59DA61B3239F3C9D0064367E /* TableViewCell.xib in Resources */,
 				5987FC1423A384270027FB5A /* RegisterPersonViewController.storyboard in Resources */,
 				591316C023A0F20E00177815 /* CollectionViewController.storyboard in Resources */,
@@ -465,10 +515,12 @@
 				5939C77823A0FACF000A204C /* CollectionViewUtil.swift in Sources */,
 				5977AA34239E328800176434 /* AppDelegate.swift in Sources */,
 				59DA61B5239F3EF20064367E /* TableViewUtil.swift in Sources */,
+				59E7F72723AC76C100293B93 /* RxViewController.swift in Sources */,
+				59E7F72923AC76F200293B93 /* RxModel.swift in Sources */,
 				591316B823A0ECC300177815 /* CollectionViewController.swift in Sources */,
 				5939C77A23A0FF33000A204C /* Extension+StoryBoard.swift in Sources */,
 				5977AA36239E328800176434 /* SceneDelegate.swift in Sources */,
-				59A2E45823AB8A13003511F2 /* TableViewModel.swift in Sources */,
+				59A2E45823AB8A13003511F2 /* RxViewModel.swift in Sources */,
 				5977AA64239E392600176434 /* RealmModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
