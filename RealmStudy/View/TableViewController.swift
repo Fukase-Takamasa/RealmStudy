@@ -26,8 +26,6 @@ class TableViewController: UIViewController, StoryboardInstantiatable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Realmのモデル定義を変更した時にマイグレーションをあげてDBに反映させる処理。
-        realmMigration()
         
         //Rxのbindの練習（UITextFieldを監視対象に登録）
         let nameObservable: Observable<String?> = nameTextField.rx.text.asObservable()

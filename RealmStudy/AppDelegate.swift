@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+<<<<<<< HEAD
         //Override point for customization after application launch.
         let config = Realm.Configuration(
             schemaVersion: 3,
@@ -22,6 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if (oldScheamVersion < 3) {
 
                 }
+=======
+        // Override point for customization after application launch.
+        let config = Realm.Configuration(
+            schemaVersion: 3,
+            migrationBlock: { migration, oldScheamVersion in
+               if (oldScheamVersion < 3) {
+
+               }
+>>>>>>> 02e0543ed02a62ee28884872013bef58d05c6707
         })
 
         Realm.Configuration.defaultConfiguration = config
