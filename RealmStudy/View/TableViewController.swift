@@ -52,6 +52,12 @@ class TableViewController: UIViewController, StoryboardInstantiatable {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
+    @IBAction func goGroupedTableViewButton(_ sender: Any) {
+        let vc: GroupedTableViewController = GroupedTableViewController.instantiate()
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     
     @IBAction func addButton(_ sender: Any) {
         let newPerson = Person()

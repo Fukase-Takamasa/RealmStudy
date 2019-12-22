@@ -35,6 +35,10 @@
 		59E7F72723AC76C100293B93 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7F72623AC76C100293B93 /* RxViewController.swift */; };
 		59E7F72923AC76F200293B93 /* RxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7F72823AC76F200293B93 /* RxModel.swift */; };
 		59E7F72B23AC772200293B93 /* RxViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E7F72A23AC772200293B93 /* RxViewController.storyboard */; };
+		67F2A9D223AD1CD200D9DA47 /* GroupedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2A9D123AD1CD200D9DA47 /* GroupedTableViewController.swift */; };
+		67F2A9D423AD1CDE00D9DA47 /* GroupedTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F2A9D323AD1CDE00D9DA47 /* GroupedTableViewController.storyboard */; };
+		67F2A9D723AD1D7300D9DA47 /* GroupedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2A9D523AD1D7300D9DA47 /* GroupedTableViewCell.swift */; };
+		67F2A9D823AD1D7300D9DA47 /* GroupedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67F2A9D623AD1D7300D9DA47 /* GroupedTableViewCell.xib */; };
 		C4530A98006C3B3DA3CEBA6F /* Pods_RealmStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DACAB14474D8B98FEE88AA9 /* Pods_RealmStudyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +97,10 @@
 		59E7F72823AC76F200293B93 /* RxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxModel.swift; sourceTree = "<group>"; };
 		59E7F72A23AC772200293B93 /* RxViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RxViewController.storyboard; sourceTree = "<group>"; };
 		5A42E47F4FAAFC0E9CA32397 /* Pods-RealmStudy-RealmStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudy-RealmStudyUITests.release.xcconfig"; path = "Target Support Files/Pods-RealmStudy-RealmStudyUITests/Pods-RealmStudy-RealmStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		67F2A9D123AD1CD200D9DA47 /* GroupedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedTableViewController.swift; sourceTree = "<group>"; };
+		67F2A9D323AD1CDE00D9DA47 /* GroupedTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupedTableViewController.storyboard; sourceTree = "<group>"; };
+		67F2A9D523AD1D7300D9DA47 /* GroupedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedTableViewCell.swift; sourceTree = "<group>"; };
+		67F2A9D623AD1D7300D9DA47 /* GroupedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupedTableViewCell.xib; sourceTree = "<group>"; };
 		6CB28BD1756E9163B391F7C6 /* Pods-RealmStudy-RealmStudyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudy-RealmStudyUITests.debug.xcconfig"; path = "Target Support Files/Pods-RealmStudy-RealmStudyUITests/Pods-RealmStudy-RealmStudyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		934DEE65FCD309BAAE127BCC /* Pods_RealmStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E3FFE9FC63D9C04DA942E4 /* Pods-RealmStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudy.release.xcconfig"; path = "Target Support Files/Pods-RealmStudy/Pods-RealmStudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +231,10 @@
 				5987FC1323A384270027FB5A /* RegisterPersonViewController.storyboard */,
 				59E7F72623AC76C100293B93 /* RxViewController.swift */,
 				59E7F72A23AC772200293B93 /* RxViewController.storyboard */,
+				67F2A9D123AD1CD200D9DA47 /* GroupedTableViewController.swift */,
+				67F2A9D323AD1CDE00D9DA47 /* GroupedTableViewController.storyboard */,
+				67F2A9D523AD1D7300D9DA47 /* GroupedTableViewCell.swift */,
+				67F2A9D623AD1D7300D9DA47 /* GroupedTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,8 +384,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5977AA40239E328900176434 /* LaunchScreen.storyboard in Resources */,
+				67F2A9D823AD1D7300D9DA47 /* GroupedTableViewCell.xib in Resources */,
 				591316C423A0F5B700177815 /* CollectionViewCell.xib in Resources */,
 				591316BE23A0F1E100177815 /* TableViewController.storyboard in Resources */,
+				67F2A9D423AD1CDE00D9DA47 /* GroupedTableViewController.storyboard in Resources */,
 				59E7F72B23AC772200293B93 /* RxViewController.storyboard in Resources */,
 				59DA61B3239F3C9D0064367E /* TableViewCell.xib in Resources */,
 				5987FC1423A384270027FB5A /* RegisterPersonViewController.storyboard in Resources */,
@@ -507,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F2A9D223AD1CD200D9DA47 /* GroupedTableViewController.swift in Sources */,
 				5987FC1623A384760027FB5A /* RegisterPersonViewController.swift in Sources */,
 				59DA61B2239F3C9D0064367E /* TableViewCell.swift in Sources */,
 				5977AA38239E328800176434 /* TableViewController.swift in Sources */,
@@ -516,6 +531,7 @@
 				5977AA34239E328800176434 /* AppDelegate.swift in Sources */,
 				59DA61B5239F3EF20064367E /* TableViewUtil.swift in Sources */,
 				59E7F72723AC76C100293B93 /* RxViewController.swift in Sources */,
+				67F2A9D723AD1D7300D9DA47 /* GroupedTableViewCell.swift in Sources */,
 				59E7F72923AC76F200293B93 /* RxModel.swift in Sources */,
 				591316B823A0ECC300177815 /* CollectionViewController.swift in Sources */,
 				5939C77A23A0FF33000A204C /* Extension+StoryBoard.swift in Sources */,
@@ -698,6 +714,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8Q84RGJJC;
 				INFOPLIST_FILE = RealmStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -717,6 +734,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8Q84RGJJC;
 				INFOPLIST_FILE = RealmStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
