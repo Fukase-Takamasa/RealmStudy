@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Grouped Table View Controller-->
+        <!--マイページ-->
         <scene sceneID="ta4-fD-8Ih">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="Gxz-Xs-8ya" customClass="GroupedTableViewController" customModule="RealmStudy" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,21 +15,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eSR-Nb-Uef">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eSR-Nb-Uef">
+                                <rect key="frame" x="0.0" y="232.5" width="414" height="629.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uy3-re-ryc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="144.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZY7-wn-id3">
+                                        <rect key="frame" x="103.5" y="41.5" width="207" height="61.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タナカ  タロウ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCO-KD-AMe">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="田中  太郎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2An-J2-Hkj">
+                                                <rect key="frame" x="0.0" y="31.5" width="207" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ZY7-wn-id3" firstAttribute="width" secondItem="Uy3-re-ryc" secondAttribute="width" multiplier="0.5" id="dJO-vz-oEI"/>
+                                    <constraint firstItem="ZY7-wn-id3" firstAttribute="centerX" secondItem="Uy3-re-ryc" secondAttribute="centerX" id="o9y-aq-ywZ"/>
+                                    <constraint firstItem="ZY7-wn-id3" firstAttribute="centerY" secondItem="Uy3-re-ryc" secondAttribute="centerY" id="yH4-31-7df"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Uy3-re-ryc" firstAttribute="leading" secondItem="cfn-Yd-hpk" secondAttribute="leading" id="6vp-st-70I"/>
                             <constraint firstItem="cfn-Yd-hpk" firstAttribute="trailing" secondItem="eSR-Nb-Uef" secondAttribute="trailing" id="Cmx-36-M6Q"/>
-                            <constraint firstItem="eSR-Nb-Uef" firstAttribute="top" secondItem="cfn-Yd-hpk" secondAttribute="top" id="Eqs-5w-dBO"/>
                             <constraint firstItem="eSR-Nb-Uef" firstAttribute="leading" secondItem="cfn-Yd-hpk" secondAttribute="leading" id="NMA-bc-VNB"/>
+                            <constraint firstItem="eSR-Nb-Uef" firstAttribute="top" secondItem="Uy3-re-ryc" secondAttribute="bottom" id="NyF-dI-bkD"/>
+                            <constraint firstItem="cfn-Yd-hpk" firstAttribute="trailing" secondItem="Uy3-re-ryc" secondAttribute="trailing" id="TEf-lX-Wsx"/>
+                            <constraint firstItem="Uy3-re-ryc" firstAttribute="top" secondItem="cfn-Yd-hpk" secondAttribute="top" id="a5k-QY-AYW"/>
                             <constraint firstItem="cfn-Yd-hpk" firstAttribute="bottom" secondItem="eSR-Nb-Uef" secondAttribute="bottom" id="oFI-ib-1SJ"/>
+                            <constraint firstItem="Uy3-re-ryc" firstAttribute="height" secondItem="eSR-Nb-Uef" secondAttribute="height" multiplier="0.23" id="u1S-lf-AOQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cfn-Yd-hpk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="V5P-Re-QrM"/>
+                    <navigationItem key="navigationItem" title="マイページ" id="V5P-Re-QrM">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="YfY-V5-Koi">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QXS-G7-sHY">
+                                <rect key="frame" x="378" y="11" width="16" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="multiply" catalog="system"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="eSR-Nb-Uef" id="ugm-AY-vjm"/>
                     </connections>
@@ -57,4 +98,7 @@
             <point key="canvasLocation" x="-55.072463768115945" y="-78.348214285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="multiply" catalog="system" width="64" height="54"/>
+    </resources>
 </document>

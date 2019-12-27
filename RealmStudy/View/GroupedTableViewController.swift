@@ -33,18 +33,29 @@ class GroupedTableViewController: UIViewController, UITableViewDelegate, UITable
         return cellConst.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let headerTitle = cellHeader[section]
-        return headerTitle
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
     
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        let headerTitle = cellHeader[section]
+//        return headerTitle
+//    }
 //    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
 //        return "フッター"
 //    }
     
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
- //       <#code#>
- //   }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x:0, y:0, width: tableView.bounds.width, height: 100))
+        headerView.backgroundColor = UIColor.red
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 35
+    }
     
 //    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
  //       <#code#>

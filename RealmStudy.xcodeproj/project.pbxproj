@@ -35,6 +35,10 @@
 		59E7F72723AC76C100293B93 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7F72623AC76C100293B93 /* RxViewController.swift */; };
 		59E7F72923AC76F200293B93 /* RxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7F72823AC76F200293B93 /* RxModel.swift */; };
 		59E7F72B23AC772200293B93 /* RxViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E7F72A23AC772200293B93 /* RxViewController.storyboard */; };
+		677E450A23AF255E00AB7C11 /* ProtoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677E450923AF255E00AB7C11 /* ProtoTableViewController.swift */; };
+		677E450C23AF257100AB7C11 /* ProtoTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677E450B23AF257100AB7C11 /* ProtoTableViewController.storyboard */; };
+		677E450E23AF68E700AB7C11 /* CustomHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677E450D23AF68E700AB7C11 /* CustomHeaderFooterView.swift */; };
+		677E451023AF694700AB7C11 /* CustomHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677E450F23AF694700AB7C11 /* CustomHeaderFooterView.xib */; };
 		67F2A9D223AD1CD200D9DA47 /* GroupedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2A9D123AD1CD200D9DA47 /* GroupedTableViewController.swift */; };
 		67F2A9D423AD1CDE00D9DA47 /* GroupedTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F2A9D323AD1CDE00D9DA47 /* GroupedTableViewController.storyboard */; };
 		67F2A9D723AD1D7300D9DA47 /* GroupedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2A9D523AD1D7300D9DA47 /* GroupedTableViewCell.swift */; };
@@ -97,6 +101,10 @@
 		59E7F72823AC76F200293B93 /* RxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxModel.swift; sourceTree = "<group>"; };
 		59E7F72A23AC772200293B93 /* RxViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RxViewController.storyboard; sourceTree = "<group>"; };
 		5A42E47F4FAAFC0E9CA32397 /* Pods-RealmStudy-RealmStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmStudy-RealmStudyUITests.release.xcconfig"; path = "Target Support Files/Pods-RealmStudy-RealmStudyUITests/Pods-RealmStudy-RealmStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		677E450923AF255E00AB7C11 /* ProtoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtoTableViewController.swift; sourceTree = "<group>"; };
+		677E450B23AF257100AB7C11 /* ProtoTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProtoTableViewController.storyboard; sourceTree = "<group>"; };
+		677E450D23AF68E700AB7C11 /* CustomHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderFooterView.swift; sourceTree = "<group>"; };
+		677E450F23AF694700AB7C11 /* CustomHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderFooterView.xib; sourceTree = "<group>"; };
 		67F2A9D123AD1CD200D9DA47 /* GroupedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedTableViewController.swift; sourceTree = "<group>"; };
 		67F2A9D323AD1CDE00D9DA47 /* GroupedTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupedTableViewController.storyboard; sourceTree = "<group>"; };
 		67F2A9D523AD1D7300D9DA47 /* GroupedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedTableViewCell.swift; sourceTree = "<group>"; };
@@ -235,6 +243,10 @@
 				67F2A9D323AD1CDE00D9DA47 /* GroupedTableViewController.storyboard */,
 				67F2A9D523AD1D7300D9DA47 /* GroupedTableViewCell.swift */,
 				67F2A9D623AD1D7300D9DA47 /* GroupedTableViewCell.xib */,
+				677E450D23AF68E700AB7C11 /* CustomHeaderFooterView.swift */,
+				677E450F23AF694700AB7C11 /* CustomHeaderFooterView.xib */,
+				677E450923AF255E00AB7C11 /* ProtoTableViewController.swift */,
+				677E450B23AF257100AB7C11 /* ProtoTableViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,7 +404,9 @@
 				59DA61B3239F3C9D0064367E /* TableViewCell.xib in Resources */,
 				5987FC1423A384270027FB5A /* RegisterPersonViewController.storyboard in Resources */,
 				591316C023A0F20E00177815 /* CollectionViewController.storyboard in Resources */,
+				677E450C23AF257100AB7C11 /* ProtoTableViewController.storyboard in Resources */,
 				5977AA3D239E328900176434 /* Assets.xcassets in Resources */,
+				677E451023AF694700AB7C11 /* CustomHeaderFooterView.xib in Resources */,
 				5977AA3B239E328800176434 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,7 +539,9 @@
 				5987FC1623A384760027FB5A /* RegisterPersonViewController.swift in Sources */,
 				59DA61B2239F3C9D0064367E /* TableViewCell.swift in Sources */,
 				5977AA38239E328800176434 /* TableViewController.swift in Sources */,
+				677E450A23AF255E00AB7C11 /* ProtoTableViewController.swift in Sources */,
 				591316C323A0F5B700177815 /* CollectionViewCell.swift in Sources */,
+				677E450E23AF68E700AB7C11 /* CustomHeaderFooterView.swift in Sources */,
 				591316BC23A0F19700177815 /* Main.swift in Sources */,
 				5939C77823A0FACF000A204C /* CollectionViewUtil.swift in Sources */,
 				5977AA34239E328800176434 /* AppDelegate.swift in Sources */,

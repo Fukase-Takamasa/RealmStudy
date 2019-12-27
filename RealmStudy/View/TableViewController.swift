@@ -54,7 +54,8 @@ class TableViewController: UIViewController, StoryboardInstantiatable {
     
     @IBAction func goGroupedTableViewButton(_ sender: Any) {
         let vc: GroupedTableViewController = GroupedTableViewController.instantiate()
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        //self.present(vc, animated: true, completion: nil)
     }
     
     
